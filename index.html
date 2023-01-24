@@ -8,16 +8,23 @@
 
     <!-- ==== CSS Files ==== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <!-- ==== Style Switcher ==== -->
+    <link rel="stylesheet" href="./style/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="./style/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="./style/skins/color-3.css" class="alternate-style" title="color-3" >
+    <link rel="stylesheet" href="./style/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="./style/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="./style/styleSwitcher.css">
+    
     <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/skins/color-1.css">
-
     <title>Portifólio</title>
 </head>
 
-<body>
+<body class="dark">
     <!-- ==== Main Container Start ==== -->
     <div class="main-container">
         <!-- ==== Aside Start ==== -->
@@ -31,27 +38,27 @@
             <nav>
                 <ul class="nav">
                     <li>
-                        <a href="#home" class="active">
+                        <a href="#home" class="active menu-link" onclick="setActiveLink(event)">
                             <i class="fa fa-home"></i>Home
                         </a>
                     </li>
                     <li>
-                        <a href="#about">
+                        <a href="#about" class="menu-link" onclick="setActiveLink(event)">
                             <i class="fa fa-user"></i>About
                         </a>
                     </li>
                     <li>
-                        <a href="#services">
+                        <a href="#services" class="menu-link" onclick="setActiveLink(event)">
                             <i class="fa fa-list"></i>Services
                         </a>
                     </li>
                     <li>
-                        <a href="#portfolio">
+                        <a href="#portfolio" class="menu-link" onclick="setActiveLink(event)">
                             <i class="fa fa-briefcase"></i>Portifolio
                         </a>
                     </li>
                     <li>
-                        <a href="#contact">
+                        <a href="#contact" class="menu-link" onclick="setActiveLink(event)">
                             <i class="fa fa-comments"></i>Contact
                         </a>
                     </li>
@@ -314,7 +321,7 @@
                         </div>
                         <!-- ==== Portifolio Item End ==== -->
                         <!-- ==== Portifolio Item Start ==== -->
-                        
+
                         <div class="portifolio-item padd-15">
                             <a target="_blank" href="https://jooaosanntos03.github.io/TodoList/">
                                 <div class="portifolio-item-inner shadow-dark">
@@ -337,7 +344,7 @@
                         </div>
                         <!-- ==== Portifolio Item End ==== -->
                         <!-- ==== Portifolio Item Start ==== -->
-                        
+
                         <div class="portifolio-item padd-15">
                             <a href="https://jooaosanntos03.github.io/Slide/" target="_blank">
                                 <div class="portifolio-item-inner shadow-dark">
@@ -451,8 +458,29 @@
     </div>
     <!-- ==== Main Container End ==== -->
 
+    <!-- ==== Style Switcher Start ==== -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- ==== Style Switcher End ==== -->
+
     <!-- ==== JS Files ==== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    referrerpolicy="no-referrer"></script>
+    <script src="./script/styleSwitcher.js"></script>
     <script src="./script/main.js"></script>
 </body>
 
