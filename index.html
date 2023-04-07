@@ -6,20 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ==== Header icon ==== -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    
+    <!-- ==== Javascript e-mail ==== -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("wGOyqxvSte7MWZoYo");
+        })();
+    </script>
+
     <!-- ==== CSS Files ==== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <!-- ==== Style Switcher ==== -->
     <link rel="stylesheet" href="./style/skins/color-1.css" class="alternate-style" title="color-1" disabled>
     <link rel="stylesheet" href="./style/skins/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="./style/skins/color-3.css" class="alternate-style" title="color-3" >
+    <link rel="stylesheet" href="./style/skins/color-3.css" class="alternate-style" title="color-3">
     <link rel="stylesheet" href="./style/skins/color-4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet" href="./style/skins/color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="./style/styleSwitcher.css">
-    
+
     <link rel="stylesheet" href="./style/main.css">
     <title>Portifólio</title>
 </head>
@@ -30,7 +42,10 @@
         <!-- ==== Aside Start ==== -->
         <div class="aside-container">
             <div class="logo">
-                <a href="#home"><span>J</span>oão</a>
+                <div class="logo-wrapper">
+                    <a href="#home"><span>J</span>oão</a>
+                    <div class="mark"></div>
+                </div>
             </div>
             <div class="nav-toggler">
                 <span></span>
@@ -77,22 +92,20 @@
                                 Hello, my name is <span class="name">João Santos</span>
                             </h3>
                             <h3 class="my-profession">
-                                I'm a web <span class="typing">web developer</span>
+                                I'm a <span class="typing">web developer</span>
                             </h3>
                             <p>I'm a bachelor's student in computer science at the federal university of campina grande.
                             </p>
                             <a href="#about" class="btn hire-me">More About Me</a>
                         </div>
-                        <div class="home-img padd-15">
-                            <!-- <img src="./img/eu-1.jpeg" alt="Uma foto minha"> -->
-                        </div>
+                        <div class="home-img padd-15"></div>
                     </div>
                 </div>
             </section>
             <!-- ==== Home Section End ==== -->
 
             <!-- ==== About Section Start ==== -->
-            <section class="about section" id="about">
+            <section" class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -144,7 +157,6 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="#" class="btn">Download CV</a>
                                             <a id="hire-me" href="#contact" class="btn hire-me">
                                                 Hire Me
                                             </a>
@@ -381,7 +393,7 @@
             <section class="contact section" id="contact">
                 <div class="container">
                     <div class="row">
-                        <div class="section-title">
+                        <div class="section-title padd-15">
                             <h2>Contact</h2>
                         </div>
                     </div>
@@ -435,32 +447,32 @@
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
+                                        <input type="text" id="name" class="form-control" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <input type="email" id="email" class="form-control" placeholder="Email">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
+                                        <input type="text" id="subject" class="form-control" placeholder="Subject">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
-                                        <textarea class="form-control" placeholder="Message"></textarea>
+                                        <textarea class="form-control" id="message" placeholder="Message"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn">Send message</button>
+                                    <button type="submit" class="btn" onclick="sendMail(event)">Send message</button>
                                 </div>
                             </div>
                         </div>
@@ -496,7 +508,7 @@
 
     <!-- ==== JS Files ==== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-    referrerpolicy="no-referrer"></script>
+        referrerpolicy="no-referrer"></script>
     <script src="./script/styleSwitcher.js"></script>
     <script src="./script/main.js"></script>
 </body>

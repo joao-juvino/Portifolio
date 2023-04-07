@@ -49,9 +49,9 @@ ul {
     background-color: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    padding: 0 50px;
     margin: 0 auto;
     opacity: 1;
+    min-width: calc(100vw - 270px);
 }
 
 .section .container {
@@ -97,7 +97,8 @@ ul {
 }
 
 .main-content {
-    padding-left: 250px;
+    overflow: hidden;
+    margin-left: 270px;
 }
 
 .padd-15 {
@@ -144,25 +145,37 @@ ul {
 /* Aside */
 .aside-container {
     height: 100%;
-    width: 250px;
+    width: 270px;
     border-right: solid 1px var(--bg-black-50);
     background-color: var(--bg-black-100);
     position: fixed;
     left: 0;
     top: 0;
     z-index: 10;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 .aside-container .logo {
-    position: absolute;
-    top: 40px;
+    width: 100%;
+    min-height: 80px;
+    position: relative;
+    margin: 30px 0px 50px 0px;
+}
+
+.aside-container .logo .logo-wrapper{
+    padding: 0px 40px;
+    text-align: center;
+}
+
+.aside-container .logo .mark{
+    height: 25px;
+    background-color: var(--skin-color);
+    position: relative;
+    top: -20px;
+    z-index: 1;
 }
 
 .aside-container .logo a {
+    z-index: 100;
     text-transform: capitalize;
     color: var(--text-black-900);
     font-weight: 600;
@@ -174,7 +187,7 @@ ul {
 
 .aside-container .logo a span {
     font-family: "Clicker Script", cursive;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .aside-container .nav-toggler {
@@ -193,51 +206,22 @@ ul {
     justify-content: center;
 }
 
-.aside-container .nav-toggler span {
-    height: 2px;
-    width: 18px;
-    background-color: var(--skin-color);
-    display: inline-block;
-    position: relative;
-}
-
-.aside-container .nav-toggler span::before {
-    content: "";
-    height: 2px;
-    width: 18px;
-    background-color: var(--skin-color);
-    position: absolute;
-    top: -6px;
-    left: 0px;
-}
-
-.aside-container .nav-toggler span::after {
-    content: "";
-    height: 2px;
-    width: 18px;
-    background-color: var(--skin-color);
-    position: absolute;
-    top: 6px;
-    left: 0px;
-}
-
 .aside-container .nav{
-    width: 250px;
+    width: 270px;
     padding: 0px 40px;
-    /* background-color: blue; */
 }
 
 .aside-container .nav li {
-    /* background-color: red; */
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--bg-black-50);
 }
 
 .aside-container .nav li a {
     font-size: 17px;
     font-weight: 600;
     display: block;
-    border-bottom: 1px solid var(--bg-black-50);
     color: var(--text-black-900);
     padding: 10px 15px;
     transition: all 0.5s ease;
@@ -248,7 +232,7 @@ ul {
 }
 
 .aside-container .nav li a i {
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 /* Home */
@@ -302,12 +286,16 @@ h3.my-profession {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    border: solid 1px var(--skin-color);
+    border: solid 5px var(--skin-color);
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     animation: profile__animate 8s ease-in-out infinite 1s;
 }
 
 /* About */
+.about{
+    padding: 0px 50px;
+}
+
 .about .about-content {
     flex: 0 0 100%;
     max-width: 100%;
@@ -372,7 +360,7 @@ h3.my-profession {
 
 .about .about-content .skills {
     border: 1px solid var(--bg-black-50);
-    margin-top: 70px;
+    margin-top: 150px;
     flex: 0 0 100%;
     max-width: 100%;
 }
@@ -430,7 +418,7 @@ h3.my-profession {
     color: var(--text-black-900);
 }
 
-/* service */
+/* Service */
 .service .container {
     padding-bottom: 40px;
 }
@@ -494,7 +482,7 @@ h3.my-profession {
     line-height: 25px;
 }
 
-/* portifolio */
+/* Portifolio */
 .portifolio .container {
     padding-bottom: 40px;
 }
@@ -562,7 +550,7 @@ h3.my-profession {
     display: block;
 }
 
-/* contact */
+/* Contact */
 .contact .contact-title {
     color: var(--skin-color);
     text-align: center;
@@ -668,11 +656,11 @@ h3.my-profession {
 
 @media (max-width: 1199px) {
     .aside-container {
-        left: -250px;
+        display: none;
     }
 
     .main-content {
-        padding-left: 0px;
+        margin-left: 0px;
     }
 
     .about .about-content .personal-info .info-item p span {
