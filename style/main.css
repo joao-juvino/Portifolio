@@ -46,6 +46,7 @@ ul {
 
 /* Section */
 .section {
+    padding: 0px 60px;
     background-color: var(--bg-black-900);
     min-height: 100vh;
     display: block;
@@ -237,7 +238,6 @@ ul {
 
 /* Home */
 .home {
-    padding: 0px 50px;
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
@@ -292,10 +292,6 @@ h3.my-profession {
 }
 
 /* About */
-.about{
-    padding: 0px 50px;
-}
-
 .about .about-content {
     flex: 0 0 100%;
     max-width: 100%;
