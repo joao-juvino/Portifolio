@@ -15,8 +15,7 @@ Este projeto foi desenvolvido utilizando **HTML, CSS e JavaScript**, com o objet
 - 📩 **Contato:** Como falar comigo para oportunidades ou colaborações  
 
 ## 📬 Entre em Contato  
-Se quiser trocar ideias, colaborar ou apenas bater um papo sobre tecnologia, sinta-se à vontade para entrar em contato!  
-
+Se quiser trocar ideias, colaborar ou apenas bater um papo sobre tecnologia, sinta-se à vontade para entrar em contato! 
 📧 Email: [joao.santoss75180@email.com](mailto:joao.samtoss75180@email.com)  
 
 ---
