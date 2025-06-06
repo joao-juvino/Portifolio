@@ -496,8 +496,10 @@ h3.my-profession {
 
 .portifolio .portifolio-item {
     position: relative;
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    /* flex: 0 0 33.33%; */
+    /* max-width: 33.33%; */
+    max-width: 300px !important;
+    max-height: 150px !important;
     margin-bottom: 30px;
 }
 
