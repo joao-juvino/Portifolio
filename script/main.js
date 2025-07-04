@@ -48,3 +48,14 @@ function sendMail(event) {
         .catch(err => console.log(err))
 
 }
+
+// const portifolioItems =  [...document.getElementsByClassName("portifolio-item")]
+
+// portifolioItems.forEach(portifolioItem => {
+//     portifolioItem.addEventListener("click", (e) => {
+//         const popupId = portifolioItem.dataset.popupId
+//         const popupElement = document.getElementById(popupId);
+//         popupElement.classList.toggle("popup-open")
+//         console.log(popupElement)
+//     })
+// })
